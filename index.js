@@ -1,12 +1,11 @@
 import express from "express"
-
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
+app.get("/", (req, res) => {
+  res.send("Hello, Vercel!");
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://127.0.0.1:${port}/`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
